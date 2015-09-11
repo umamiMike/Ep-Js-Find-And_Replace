@@ -1,17 +1,14 @@
-# _Word order_
-## _list of all the unique words and how many times they appeared 9/10/2015_
-### By Charles Moss and Jordan Johansen
+# _Find and Replace in Eisenhower's Farewell Address_
+## _Finds all instances of a word in the speech and replaces it with what you choose!_
+### By Mike Chastain
 ## Description
-_User inputs a block of text and returns a list of all the unique words and how many times they appeared._
-
-## Setup
-_Clone and open index.html in your browser._  
+__
 
 ## Technologies Used
 _This project makes use of: [Mocha](https://mochajs.org/), and [Chai](http://chaijs.com/) as testing-frameworks. And has a dependency for jQuery._
 
 ### Legal
-Copyright (c) 2015 Charles A Moss and Jordan Johansen
+Copyright (c) 2015 Mike Chastain
 
 This software is licensed under the MIT license.
 
