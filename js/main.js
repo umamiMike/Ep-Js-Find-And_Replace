@@ -1,28 +1,31 @@
-var wordOrder = function (phrase) {
-
-    var wordArr = phrase.split(" ");
-    var counts = {};
-
-    for(var i = 0; i< wordArr.length; i++) {
-        var word = wordArr[i];
-
-        counts[word] = counts[word] ? counts[word]+1 : 1;
-    }
-
-    var finArr = [];
-    for (var key in counts) {
-        finArr.push([key, counts[key]]);
-    };
-    finArr.sort(function(a, b) {return b[1]-a[1]});
-    debugger;
-    return finArr;
-}
-
-// Potential display formatting function
-// var displayList = function(finArr) {
-//     var string = "";
-//     finArr.forEach(function(pair) {
-//         string += pair[0] : pair[1];
-//     });
-//     return string;
+// var scrapeSite = function (theURL) {
+//
+// var retRes = $.ajax({
+//     url: theURL ,
+//     xhrFields:{
+//         withCredentials: true
+//             },
+//     type: 'GET',
+//     dataType: 'jsonp',
+//     jsonpCallback: 'callback',
+//
+//     success: function(json) {
+//         console.log(json);
+//         var headline = $(res.responseText).find('p').text();
+//         alert("Success");
+//     },
+//     error: function(){console.log( 'daum!');},
+//     jsonp: 'json'
+// });
+//
+// return retRes;
 // }
+
+$(document).ready(function() {
+    $("form#baseconvert").submit(function(event){
+
+
+        $("#result").show();
+        event.preventDefault();
+    });
+});
