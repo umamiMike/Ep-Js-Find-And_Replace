@@ -1,3 +1,40 @@
+var findReplace = function(w_find,w_replace)
+    { w_find =  w_find + "\\b";
+    console.log(w_find);
+        var re =  new RegExp (w_find,"gi");
+        var str = $("#text_to_work_on").text();
+        var newstr = str.replace(re, w_replace);
+        //console.log(newstr);  // oranges are round, and oranges are juicy.
+        return newstr;
+    }
+
+$(document).ready(function() {
+    $("form#findReplace").submit(function(event){
+        var find_word = $('#word_find').val();
+        var replace_word = $('#word_replace').val();
+        var replaced = findReplace(find_word,replace_word);
+        console.log(replaced);
+        $("#text_to_work_on").text(replaced);
+
+        event.preventDefault();
+    });
+});
+
+//was tricky to implement with keyup due to not caching of original text and
+//replacing that in subsequent alterations
+
+// $(document).on("keyup", ".main__form", function () {
+//         console.log("keyup occured");
+//         var find_word = $('#word_find').val();
+//         var replace_word = $('#word_replace').val();
+//     var replaced = findReplace(find_word,replace_word);
+//     console.log(replaced);
+//     $("#text_to_work_on").text(replaced);
+
+    //event.preventDefault();
+
+//});
+
 // var scrapeSite = function (theURL) {
 //
 // var retRes = $.ajax({
@@ -20,12 +57,3 @@
 //
 // return retRes;
 // }
-
-$(document).ready(function() {
-    $("form#baseconvert").submit(function(event){
-
-
-        $("#result").show();
-        event.preventDefault();
-    });
-});
