@@ -2,7 +2,7 @@
 ## _Finds all instances of a word in the speech and replaces it with what you choose!_
 ### By Mike Chastain
 ## Description
-__
+_[Live Demo ] (http://umamimike.github.io/Ep-Js-Find-And_Replace/)_
 
 ## Technologies Used
 _This project makes use of: [Mocha](https://mochajs.org/), and [Chai](http://chaijs.com/) as testing-frameworks. And has a dependency for jQuery._
