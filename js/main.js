@@ -1,11 +1,11 @@
-var findReplace = function(w_find,w_replace)
-    { w_find =  "\\b" + w_find + "\\b";
-        var re =  new RegExp (w_find,"gi");
-        var str = $("#text_to_work_on").text();
-        var newstr = str.replace(re, w_replace);
-        //console.log(newstr);  // oranges are round, and oranges are juicy.
-        return newstr;
-    }
+var findReplace = function(w_find,w_replace){ 
+    w_find =  "\\b" + w_find + "\\b";
+    var re =  new RegExp (w_find,"gi");
+    var str = $("#text_to_work_on").text();
+    var newstr = str.replace(re, w_replace);
+    //console.log(newstr);  // oranges are round, and oranges are juicy.
+    return newstr;
+}
 
 $(document).ready(function() {
     $("form#findReplace").submit(function(event){
